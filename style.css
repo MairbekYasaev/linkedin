@@ -134,7 +134,7 @@ a {
     flex-basis: 25%;
     align-self: flex-start;
     position: sticky;
-    top: 90px;
+    top: 83px;
 }
 .sidebar-profile-box {
     background: #fff;
@@ -251,7 +251,7 @@ a {
     flex-basis: 25%;
     align-self: flex-start;
     position: sticky;
-    top: 90px;
+    top: 83px;
 }
 
 .sidebar-news {
@@ -612,7 +612,7 @@ a {
     flex-basis: 25%;
     align-self: flex-start;
     position: sticky;
-    top: 73px;
+    top: 82px;
 }
 
 .profile-container {
@@ -831,10 +831,13 @@ a {
     justify-content: flex-start;
 }
 
+#ShowMoreLink {
+    display: none;
+}
 
  /* -------media query for small screen----------- */
 
- @media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 800px) {
     .search-box {
         width: auto;
         background: transparent;
@@ -881,5 +884,37 @@ a {
 
     .post-activity-link img {
         margin-right: 0;
+    }
+
+    .profile-main, .profile-sidebar {
+        flex-basis: 100%;
+    }
+
+    .profile-container {
+        font-size: 14px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        margin-right: -50px;
+    }
+
+    .profile-description {
+        font-size: 14px;
+    }
+
+    #ShowMoreLink {
+        display: block;
+        width: max-content;
+        margin: 10px auto;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .sidebar-activity {
+        display: none;
+    }
+    .sidebar-activity.open-activity {
+        display: block;
     }
  }

@@ -11,7 +11,7 @@
     
     <nav class="navbar">
         <div class="navbar-left">
-            <a href="index.html" class="logo"><img src="images/logo.png"alt=""></a>
+            <a href="/profile.html" class="logo"><img src="images/logo.png"alt=""></a>
             <div class="search-box">
                 <img src="images/search.png" alt="">
                 <input type="text" placeholder="Search">
@@ -100,7 +100,7 @@
                 </div>
             </div>
         
-        <div class="sidebar-activity">
+        <div class="sidebar-activity" id="sidebarActivity">
             <h3>RECENT</h3>
             <a href="#"><img src="images/recent.png" alt="">Web Development</a>
             <a href="#"><img src="images/recent.png" alt="">User Interface</a>
@@ -121,13 +121,13 @@
                 <a href="#">Discover More</a>
             </div>
         </div>
-            
+            <p id="ShowMoreLink" onclick="toogleActivity()">Show more<b>+</b></p>
         </div>
         <!-------- main-content ---------->
         <div class="main-content">
             <div class="create-post">
                 <div class="create-post-input">
-                    <img src="images/user-1.png">
+                    <img src="images/user-1.png" alt="img">
                     <textarea rows="2" placeholder="Write a post"></textarea>
                 </div>
 
@@ -140,7 +140,7 @@
 
                 <div class="sort-by">
                     <hr>
-                    <p>Sort by: <span>top <img src="./images/down-arrow.png"></span></p>
+                    <p>Sort by: <span>top <img src="./images/down-arrow.png" alt="Sort"></span></p>
                 </div>
 
                 <div class="post">
@@ -156,7 +156,7 @@
                         and digital marketing strategy. If you are on first page of all major
                         search engines then you are ahead among your competitors.
                     </p>
-                    <img src="images/post-image-1.png" width="100%">
+                    <img src="images/post-image-1.png" alt="main-img" width="100%">
 
                     <div class="post-stats">
                         <div>
@@ -171,8 +171,8 @@
                     </div>
                     <div class="post-activity">
                         <div class="post-activity-link">
-                            <img src="images/user-1.png" class="post-activity-user-icon">
-                            <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                            <img src="images/user-1.png" alt="user-1" class="post-activity-user-icon">
+                            <img src="images/down-arrow.png" alt="arrow" class="post-activity-arrow-icon">
                         </div>
                         <div class="post-activity-link">
                             <img src="images/like.png" alt="">
@@ -210,7 +210,7 @@
                         and digital marketing strategy. If you are on first page of all major
                         search engines then you are ahead among your competitors.
                     </p>
-                    <img src="images/post-image-2.png" width="100%">
+                    <img src="images/post-image-2.png" alt="post-image-2" width="100%">
 
                     <div class="post-stats">
                         <div>
@@ -225,8 +225,8 @@
                     </div>
                     <div class="post-activity">
                         <div class="post-activity-link">
-                            <img src="images/user-1.png" class="post-activity-user-icon">
-                            <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                            <img src="images/user-1.png" alt="user-1" class="post-activity-user-icon">
+                            <img src="images/down-arrow.png" alt="user-2" class="post-activity-arrow-icon">
                         </div>
                         <div class="post-activity-link">
                             <img src="images/like.png" alt="">
@@ -264,7 +264,7 @@
                         and digital marketing strategy. If you are on first page of all major
                         search engines then you are ahead among your competitors.
                     </p>
-                    <img src="images/post-image-3.png" width="100%">
+                    <img src="images/post-image-3.png" alt="post-image-3" width="100%">
 
                     <div class="post-stats">
                         <div>
@@ -279,8 +279,8 @@
                     </div>
                     <div class="post-activity">
                         <div class="post-activity-link">
-                            <img src="images/user-1.png" class="post-activity-user-icon">
-                            <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                            <img src="images/user-1.png" alt="user-1" class="post-activity-user-icon">
+                            <img src="images/down-arrow.png" alt="arrow" class="post-activity-arrow-icon">
                         </div>
                         <div class="post-activity-link">
                             <img src="images/like.png" alt="">
@@ -319,7 +319,7 @@
                         and digital marketing strategy. If you are on first page of all major
                         search engines then you are ahead among your competitors.
                     </p>
-                    <img src="images/post-image-4.png" width="100%">
+                    <img src="images/post-image-4.png" alt="post-image-4" post-image-4 width="100%">
 
                     <div class="post-stats">
                         <div>
@@ -334,8 +334,8 @@
                     </div>
                     <div class="post-activity">
                         <div class="post-activity-link">
-                            <img src="images/user-1.png" class="post-activity-user-icon">
-                            <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                            <img src="images/user-1.png" alt="user-1" class="post-activity-user-icon">
+                            <img src="images/down-arrow.png" alt="arrow" class="post-activity-arrow-icon">
                         </div>
                         <div class="post-activity-link">
                             <img src="images/like.png" alt="">
@@ -365,7 +365,7 @@
         <!-------- right-sidebar  ---------->
         <div class="right-sidebar">
                 <div class="sidebar-news">
-                    <img src="images/more.png" class="info-icon">
+                    <img src="images/more.png" alt="info-img" class="info-icon">
                     <h3>Trending news</h3>
                     <a href="#">High demand for skilled manpower</a>
                     <span>1d ago &middot; 10,934 readers</span>
@@ -423,6 +423,22 @@
             profileMenu.classList.toggle('open-menu')
         }
 
+
+        let sidebarActivity = document.getElementById('sidebarActivity'),
+            ShowMoreLink = document.getElementById('ShowMoreLink');
+
+            function toogleActivity() {
+            sidebarActivity.classList.toggle('open-activity');
+
+            if(sidebarActivity.classList.contains('open-activity')){
+            ShowMoreLink.innerHTML = 'Show less <b>-</b>';
+        }
+        else {
+            ShowMoreLink.innerHTML = 'Show More <b>+</b>';
+        }
+            }
+        
+        
     </script>
 </body>
 </html>
